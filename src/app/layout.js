@@ -1,14 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.js ya app/layout.tsx
+import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Open Sans font setup
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
+  // weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Playfair Display font setup
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  // weight: ["400", "600", "700"],
 });
 
 export const metadata = {
@@ -20,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${openSans.variable} ${playfair.variable} antialiased`}
       >
         {children}
       </body>
